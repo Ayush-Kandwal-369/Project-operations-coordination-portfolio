@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayush Kandwal: Project Coordination Portfolio</title>
+<meta name="description" content="Project Coordinator | PMO Support | Project Operations. Interactive portfolio with case studies and working trackers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --surface:#F3F5F7; --surface2:#E6EAEE; --ink:#1F2933; --muted:#55616E; --head:#172B4D;
+  --accent:#477C73; --accent-ink:#2F5B52; --rule:#D5DAE0; --link:#1F5C99; --hero:#172B4D; --on-hero:#FFFFFF; --hero-soft:#C9D6EA;
+  --ok-bg:#D9EBE6; --ok-ink:#2F5B52; --bad-bg:#F2D9D9; --bad-ink:#7A2E2E; --warn-bg:#F5E6C8; --warn-ink:#6B4A00; --info-bg:#DCE6F5; --info-ink:#1F3B6B;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1A2F; --surface:#15233B; --surface2:#1E2E4A; --ink:#E4E9F0; --muted:#A9B5C6; --head:#D3E2FF;
+    --accent:#6FB3A5; --accent-ink:#9AD7C8; --rule:#2B3C5A; --link:#8DB9F0; --hero:#0A1428; --on-hero:#FFFFFF; --hero-soft:#B7C6DD;
+    --ok-bg:#1E3D37; --ok-ink:#A5DCCF; --bad-bg:#4A2528; --bad-ink:#F2B8B8; --warn-bg:#4A3A17; --warn-ink:#F2D28A; --info-bg:#1F3358; --info-ink:#BCD0F2;
+  }
+}
+:root[data-theme="dark"]{
+    --bg:#0E1A2F; --surface:#15233B; --surface2:#1E2E4A; --ink:#E4E9F0; --muted:#A9B5C6; --head:#D3E2FF;
+    --accent:#6FB3A5; --accent-ink:#9AD7C8; --rule:#2B3C5A; --link:#8DB9F0; --hero:#0A1428; --on-hero:#FFFFFF; --hero-soft:#B7C6DD;
+    --ok-bg:#1E3D37; --ok-ink:#A5DCCF; --bad-bg:#4A2528; --bad-ink:#F2B8B8; --warn-bg:#4A3A17; --warn-ink:#F2D28A; --info-bg:#1F3358; --info-ink:#BCD0F2;
+}
+html{height:100%;scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 'Source Sans 3',Calibri,'Segoe UI',system-ui,-apple-system,sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3,h4{color:var(--head);line-height:1.2;margin:0;font-weight:700}
+p{margin:0}
+a{color:var(--link)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+section{padding:64px 0}
+.alt{background:var(--surface)}
+.kicker{color:var(--accent-ink);font-weight:700;font-size:15px;margin-bottom:6px}
+h2.title{font-size:32px;max-width:24em}
+.lead{color:var(--muted);max-width:46em;margin-top:10px}
+.muted{color:var(--muted)}
+.small{font-size:14.5px}
+.skip{position:absolute;left:-999px;top:0;background:var(--head);color:var(--bg);padding:8px 14px;z-index:20}
+.skip:focus{left:8px;top:8px}
+/* top bar + hero */
+.top{background:var(--hero);color:var(--on-hero)}
+.top .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.top strong{font-size:16px}
+.top nav{display:flex;flex-wrap:wrap;gap:4px 20px;font-size:15px}
+.top nav a{color:var(--hero-soft);text-decoration:none;padding:4px 0}
+.top nav a:hover,.top nav a:focus{color:#fff;text-decoration:underline}
+.hero{background:var(--hero);color:var(--on-hero);padding:36px 0 64px}
+.hero .wrap{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
+.hero .lhs{flex:1 1 520px;min-width:0}
+.hero .rhs{flex:1 1 320px;min-width:0;background:rgba(255,255,255,.08);border-radius:14px;padding:22px 24px}
+.hero h1{color:#fff;font-size:clamp(38px,6vw,58px);margin:6px 0 0}
+.hero .tag{color:var(--hero-soft);font-weight:700}
+.hero .head2{color:#fff;font-size:24px;font-weight:600;margin-top:16px;max-width:20em;line-height:1.3}
+.hero .pos{color:#DCE6F5;margin-top:14px;max-width:36em}
+.hero a{color:#fff}
+.contact{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:22px;font-weight:700}
+.rhs .ev{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.rhs .ev:last-child{border-bottom:0}
+.rhs .ev b{display:block;font-size:30px;line-height:1.1;color:#fff}
+.rhs .ev span{color:#DCE6F5;font-size:15px}
+.rhs h2{color:var(--hero-soft);font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+/* cards, grids */
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--surface);border-radius:12px;padding:20px 22px}
+.alt .card{background:var(--bg)}
+.chip{display:inline-block;background:var(--accent);color:#fff;border-radius:6px;padding:2px 10px;font-size:13.5px;font-weight:700}
+.chip.team{background:#5B6770}.chip.rec{background:var(--head);color:var(--bg)}
+.metric b{display:block;font-size:30px;color:var(--head);line-height:1.15;margin:10px 0 2px}
+.metric .lab{font-weight:700}
+.metric p{margin-top:6px;font-size:15.5px;color:var(--ink)}
+.metric .basis{margin-top:8px;font-size:13.5px;font-style:italic;color:var(--muted)}
+ul.clean{margin:0;padding-left:20px}
+ul.clean li{margin:0 0 6px}
+.label{font-weight:700;color:var(--accent-ink);font-size:14px;letter-spacing:.05em;text-transform:uppercase;margin:20px 0 6px}
+.label:first-child{margin-top:0}
+.band{background:var(--surface);border-radius:10px;padding:14px 18px;margin-top:22px;border-left:0;font-weight:600}
+.alt .band{background:var(--bg)}
+.band b{color:var(--accent-ink)}
+.note{font-size:14px;color:var(--muted);font-style:italic}
+.illus{display:inline-block;border:1px solid var(--accent);color:var(--accent-ink);border-radius:6px;padding:1px 9px;font-size:13px;font-weight:700}
+/* controls */
+label{font-weight:600}
+select,input[type=number],input[type=date]{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:8px;padding:8px 10px;min-height:42px;max-width:100%}
+input[type=range]{width:100%;min-height:32px;accent-color:var(--accent)}
+button{font:inherit;cursor:pointer}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn{background:var(--bg);color:var(--head);border:1px solid var(--rule);border-radius:999px;padding:9px 18px;font-weight:700;min-height:44px}
+.btn[aria-pressed="true"],.btn[aria-selected="true"]{background:var(--head);color:var(--bg);border-color:var(--head)}
+.btn.sm{padding:5px 12px;min-height:36px;font-size:14.5px}
+.row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 16px}
+/* pills */
+.pill{display:inline-block;padding:3px 11px;border-radius:999px;font-weight:700;font-size:14px;white-space:nowrap}
+.p-not{background:var(--surface2);color:var(--muted)}
+.p-recv{background:var(--warn-bg);color:var(--warn-ink)}
+.p-valid{background:var(--info-bg);color:var(--info-ink)}
+.p-issue{background:var(--bad-bg);color:var(--bad-ink)}
+.p-appr{background:var(--ok-bg);color:var(--ok-ink)}
+.p-over{background:var(--bad-bg);color:var(--bad-ink)}.p-within{background:var(--ok-bg);color:var(--ok-ink)}
+.p-high{background:var(--bad-bg);color:var(--bad-ink)}.p-med{background:var(--warn-bg);color:var(--warn-ink)}.p-low{background:var(--ok-bg);color:var(--ok-ink)}
+/* progress */
+.bar{height:10px;background:var(--rule);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);transition:width .25s}
+/* tables */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--rule);border-radius:10px;background:var(--bg)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th{background:var(--head);color:var(--bg);text-align:left;padding:9px 10px;font-weight:700;white-space:nowrap}
+td{padding:7px 10px;border-top:1px solid var(--rule);vertical-align:middle}
+td.n,th.n{text-align:right;white-space:nowrap}
+.nw{white-space:nowrap}
+tr.grp td{background:var(--surface2);font-weight:700;color:var(--head)}
+tr.dim td{opacity:.35}
+tr.hit td{background:var(--info-bg)}
+tr.done td{text-decoration:line-through;color:var(--muted)}
+td select{min-height:36px;padding:4px 8px;font-size:15px}
+/* kpis */
+.kpi{background:var(--surface);border-radius:10px;padding:12px 14px}
+.alt .kpi{background:var(--bg)}
+.kpi b{display:block;font-size:26px;line-height:1.1;color:var(--head)}
+.kpi span{font-size:13.5px;color:var(--muted)}
+.kpi.bad b{color:var(--bad-ink)}.kpi.warn b{color:var(--warn-ink)}.kpi.ok b{color:var(--ok-ink)}
+/* stepper / chain */
+.steps,.chain{display:flex;flex-wrap:wrap;gap:8px}
+.step{display:flex;align-items:center;gap:8px;padding:6px 16px 6px 6px;border-radius:999px;border:1px solid var(--rule);background:var(--bg);color:var(--head);font-weight:700;min-height:44px}
+.step .n{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--surface2);color:var(--head);font-size:14px}
+.step[aria-pressed="true"]{background:var(--head);color:var(--bg);border-color:var(--head)}
+.step[aria-pressed="true"] .n{background:var(--accent);color:#fff}
+.detail{margin-top:14px;background:var(--surface);border-radius:12px;padding:18px 22px}
+.alt .detail{background:var(--bg)}
+.detail h4{font-size:18px;margin-bottom:4px}
+.cal{display:flex;gap:6px;flex-wrap:wrap}
+.cal div{border-radius:10px;color:#fff;padding:14px 16px;min-width:120px}
+.cal b{display:block;font-size:17px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-right:6px}
+.scale{display:flex;gap:6px;margin:8px 0}
+.scale span{width:36px;height:34px;border:2px solid var(--rule);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--muted)}
+.scale span.on{background:var(--accent);border-color:var(--accent);color:#fff}
+footer{background:var(--hero);color:var(--on-hero);padding:60px 0 44px}
+footer h2{color:#fff;font-size:36px;max-width:16em}
+footer p{color:#DCE6F5;max-width:38em;margin-top:14px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.cta a{background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:13px 24px;border-radius:999px}
+.cta a.alt2{background:rgba(255,255,255,.14)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:640px){section{padding:44px 0}h2.title{font-size:27px}.wrap{padding:0 18px}}
+@media print{.top nav,.tabs,.skip{display:none}section{padding:28px 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top"><div class="wrap">
+  <strong>Ayush Kandwal</strong>
+  <nav aria-label="Sections">
+    <a href="#try">Try it</a><a href="#impact">Impact</a><a href="#work">How I work</a><a href="#aecom">AECOM</a><a href="#workbook">Budget workbook</a><a href="#flow">Site flow</a><a href="#tool">Trackers</a><a href="#growth">Recognition</a><a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="h-name"><div class="wrap">
+  <div class="lhs">
+    <p class="tag">Project coordination | PMO support | Project operations</p>
+    <h1 id="h-name">Ayush Kandwal</h1>
+    <p class="head2">Project Coordinator who drives every issue to closure.</p>
+    <p class="pos">Project Coordinator with 2.8 years in engineering and infrastructure consultancies: billing operations at AECOM and head-office project coordination at Surbana Jurong. I keep information, approvals and payments moving between sites, finance and management, with records that stand up to review.</p>
+    <div class="contact">
+      <span>Noida, India</span><span>Available to join immediately</span>
+      <a href="mailto:ayushkandwal835@gmail.com">ayushkandwal835@gmail.com</a>
+      <a href="tel:+918351068369">+91-8351068369</a>
+      <a href="https://www.linkedin.com/in/-ayushkandwal/" target="_blank" rel="noopener">LinkedIn profile</a>
+    </div>
+  </div>
+  <aside class="rhs" aria-label="Selected evidence">
+    <h2>Selected evidence</h2>
+    <div class="ev"><b>~180</b><span>projects billed every month at AECOM</span></div>
+    <div class="ev"><b>&lt; 15</b><span>errors across approximately 1.7 years under independent monthly QA review</span></div>
+    <div class="ev"><b>15</b><span>projects across 7 project groups coordinated at Surbana Jurong</span></div>
+    <div class="ev"><b>Strong</b><span>manager rating, 4 on a 5-point scale (2024 review)</span></div>
+  </aside>
+</div></section>
+
+<!-- ================= TRY IT: CHECKLIST ================= -->
+<section id="try" class="alt" aria-labelledby="h-try"><div class="wrap">
+  <p class="kicker">Try it</p>
+  <h2 class="title" id="h-try">Move a document through the checklist</h2>
+  <p class="lead">A slice of the tracker I keep for month-end documents. Change any status and the count updates. <span class="illus">Illustrative data</span></p>
+  <div class="card" style="margin-top:20px;max-width:760px">
+    <div class="tw" style="border:0"><table id="hero-table" aria-label="Document checklist">
+      <thead><tr><th>Document</th><th>Status</th></tr></thead><tbody id="hero-body"></tbody>
+    </table></div>
+    <div style="margin-top:16px"><div class="bar" aria-hidden="true"><i id="hero-bar" style="width:0%"></i></div>
+    <p id="hero-summary" style="margin-top:10px;font-weight:700;color:var(--head)" aria-live="polite"></p></div>
+  </div>
+</div></section>
+
+<!-- ================= IMPACT ================= -->
+<section id="impact" aria-labelledby="h-impact"><div class="wrap">
+  <p class="kicker">Impact at a glance</p>
+  <h2 class="title" id="h-impact">Evidence of accuracy, volume and follow-through across two employers</h2>
+  <p class="lead">Figures are approximate and drawn from my own records. Each card says whether the figure is mine or a team result, and what it rests on.</p>
+  <div class="grid g3" style="margin-top:26px">
+    <article class="card metric"><span class="chip">Personal workload</span><b>~180</b><div class="lab">projects billed every month</div><p>Weekly batches of roughly 72, 54, 24 and 32 projects for US onshore teams, handled on a 6pm to 3am IST shift.</p><p class="basis">Basis: weekly scheduled-project lists, AECOM</p></article>
+    <article class="card metric"><span class="chip">Personal record</span><b>&lt; 15</b><div class="lab">errors across approximately 1.7 years</div><p>An independent QA team reviewed every step each month. The record includes four consecutive zero-error months.</p><p class="basis">Basis: independent monthly QA review</p></article>
+    <article class="card metric"><span class="chip team">Team result</span><b>2.8 to 1.4 days</b><div class="lab">team turnaround</div><p>Time to act on an invoice and return it to the PM or finalize it. A team result to which I contributed.</p><p class="basis">Basis: team figures, AECOM</p></article>
+    <article class="card metric"><span class="chip">Personal scope</span><b>15</b><div class="lab">projects across 7 project groups</div><p>Head-office coordination of water and infrastructure projects, with about 12 vendors per project and about 112 contract-based subconsultant staff.</p><p class="basis">Basis: my project records, Surbana Jurong</p></article>
+    <article class="card metric"><span class="chip">Personal workload</span><b>~100 + 10 to 15</b><div class="lab">invoices verified each month</div><p>Subconsultant staff invoices plus client invoices, validated and corrected before onward processing.</p><p class="basis">Basis: my trackers, Surbana Jurong</p></article>
+    <article class="card metric"><span class="chip rec">Recognition</span><b>Strong</b><div class="lab">manager rating, 4 on a 5-point scale</div><p>2024 annual review (Oct 2023 to Jun 2024), plus a written Letter of Appreciation (email) in December 2023.</p><p class="basis">Basis: HR review record and email, available for verification</p></article>
+  </div>
+  <p class="note" style="margin-top:18px;max-width:60em"><b>A note on accuracy.</b> My r&eacute;sum&eacute; also cites 99% accuracy. The documented, independently reviewed record is the one shown here: fewer than 15 errors across approximately 1.7 years. Personal means work I carried out myself; Team means a result achieved with colleagues, to which I contributed.</p>
+</div></section>
+
+<!-- ================= HOW I WORK ================= -->
+<section id="work" class="alt" aria-labelledby="h-work"><div class="wrap">
+  <div class="grid g2" style="gap:40px">
+    <div>
+      <h2 class="title" id="h-work">How I work</h2>
+      <p style="margin-top:12px;max-width:34em">I keep a project&rsquo;s documentation, payments and people moving in the same direction. I validate and correct invoices and agreements before they reach a director, resolve issues across finance, HR, administration and site teams, and maintain trackers that give everyone a clear view of status.</p>
+      <div class="grid g2" style="margin-top:20px;gap:12px">
+        <div class="card"><h3 style="font-size:17px">Verify, correct, close</h3><p class="small muted">I do not merely review a document; I resolve the issue and confirm it is closed.</p></div>
+        <div class="card"><h3 style="font-size:17px">Make status visible</h3><p class="small muted">Trackers and status reports that a Director can read in a minute.</p></div>
+        <div class="card"><h3 style="font-size:17px">Document everything</h3><p class="small muted">Requests in writing, in one place, with dates, so nothing is lost.</p></div>
+        <div class="card"><h3 style="font-size:17px">Escalate early</h3><p class="small muted">Raise a stalled item while there is still time to resolve it.</p></div>
+      </div>
+      <p class="label" style="margin-top:24px">Tools and systems</p>
+      <ul class="clean small">
+        <li>Advanced Excel: trackers, cash sheets, balance models</li>
+        <li>Oracle billing system and Order-to-Cash, the process from order to invoice and payment</li>
+        <li>Word, PowerPoint, Teams; Tableau (Fundamentals); Lean Six Sigma Green Belt</li>
+      </ul>
+      <p class="small muted" style="margin-top:6px">Developing next: Power BI. PMP planned.</p>
+    </div>
+    <div>
+      <h3 style="font-size:22px;margin-bottom:14px">Experience</h3>
+      <article class="card">
+        <div class="row" style="justify-content:space-between"><h4 style="font-size:19px">Surbana Jurong India</h4><span class="small muted"><b>Noida, Mar 2025 to Mar 2026</b></span></div>
+        <p style="color:var(--link);font-weight:700;margin:2px 0 8px">Project Coordinator (Operations)</p>
+        <ul class="clean small">
+          <li>Head-office coordination point for 15 water and infrastructure projects across 7 project groups: AMRUT and Jal Jeevan Mission programmes (Bihar, Nagaland, Agartala, Madhya Pradesh, Karnataka), the Chennai Desalination Project, METL Jhajjar for Reliance, and DLF Water Treatment.</li>
+          <li>With two peers, developed an offline Excel tracking framework during a corporate system transition. Separately, designed and maintained project-specific Excel workbooks (budget, expenses, subconsultant contracts) and reported from them to the Director.</li>
+          <li>Validated about 100 subconsultant staff invoices and 10 to 15 client invoices each month, along with vendor agreements; prepared client invoices and cash sheets for selected projects.</li>
+        </ul>
+      </article>
+      <article class="card" style="margin-top:14px">
+        <div class="row" style="justify-content:space-between"><h4 style="font-size:19px">AECOM Global Business Services</h4><span class="small muted"><b>Bengaluru, Jul 2023 to Feb 2025</b></span></div>
+        <p style="color:var(--link);font-weight:700;margin:2px 0 8px">Billing Coordinator</p>
+        <ul class="clean small">
+          <li>Billed about 180 engineering projects a month for US onshore teams, working a US-hours night shift.</li>
+          <li>Recorded fewer than 15 errors across approximately 1.7 years under independent monthly QA review, including four consecutive zero-error months.</li>
+          <li>Maintained audit-ready billing records in the Oracle billing system and authored handover guides.</li>
+        </ul>
+      </article>
+      <p class="label" style="margin-top:22px">Education and certifications</p>
+      <p class="small"><b>MBA</b>, IMS Unison University, Dehradun (2021 to 2023)<br><b>BBA</b>, Doon Business School, Dehradun (2018 to 2021)<br>Lean Six Sigma Green Belt. Coursera: Excel Data Analysis, Portfolio Optimization, Tableau Fundamentals, Business Application of Hypothesis Testing &amp; Confidence Interval Estimation.</p>
+      <p class="small muted" style="margin-top:8px"><b>Subconsultant staff</b> are the contract-based personnel supporting the projects.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================= CASE STUDY 1: AECOM ================= -->
+<section id="aecom" aria-labelledby="h-aecom"><div class="wrap">
+  <p class="kicker">Case study 1: AECOM Global Business Services, Bengaluru, Jul 2023 to Feb 2025</p>
+  <h2 class="title" id="h-aecom">A 180-project monthly billing cycle, run to an independent quality standard</h2>
+  <div class="grid g2" style="margin-top:26px;gap:36px">
+    <div>
+      <p class="label">Context</p><p>I billed about 180 engineering projects a month for AECOM&rsquo;s US onshore teams, working a 6pm to 3am IST shift. Invoices moved in weekly batches of roughly 72, 54, 24 and 32 projects.</p>
+      <p class="label">Challenge</p><p>Every invoice needed a project manager&rsquo;s decision and edits before release, so the cycle depended on prompt, accurate exchanges across time zones, often with colleagues unfamiliar with how billing works.</p>
+      <p class="label">My responsibility</p><p>I was the biller accountable for taking each scheduled invoice from the weekly list to finalization, and for keeping my actions traceable for the QA team.</p>
+      <p class="label">Actions</p>
+      <ul class="clean">
+        <li>Ran the weekly cycle end to end in the Oracle billing system, from loading scheduled projects to finalizing and dispatching invoices.</li>
+        <li>Turned around PM comments within the Tuesday to Wednesday edit window and escalated stalled invoices early.</li>
+        <li>Kept the team&rsquo;s shared tracker current, plus my own log of PM requests received on Teams and Outlook.</li>
+        <li>Led a session for project accountants on the billing steps behind their most frequent questions, and wrote handover guides.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card"><p class="label">Evidence of outcome</p>
+        <ul class="clean">
+          <li>Fewer than 15 errors across approximately 1.7 years under independent QA review, including four consecutive zero-error months.</li>
+          <li>Team turnaround from 2.8 to 1.4 days to act on an invoice and return it to the PM or finalize it (a team result; I contributed).</li>
+          <li>Written Letter of Appreciation (email), December 2023, from AECOM&rsquo;s East Region Finance Lead and a project lead.</li>
+        </ul>
+        <p class="label">Controls and artefacts</p>
+        <p class="small">Shared task tracker for the QA team; personal log of PM requests; audit-ready records in the Oracle billing system; handover guides.</p>
+      </div>
+    </div>
+  </div>
+  <h3 style="font-size:22px;margin:34px 0 4px">The weekly cycle, step by step</h3>
+  <p class="muted small" style="margin-bottom:12px">Select a step to see what happened at that point.</p>
+  <div class="steps" id="steps" role="group" aria-label="Weekly billing cycle steps"></div>
+  <div class="detail" aria-live="polite"><h4 id="step-title"></h4><p id="step-detail"></p></div>
+  <p class="band"><b>Why it matters:</b> project managers receive accurate invoices on time, and finance has a traceable record that was independently reviewed every month.</p>
+</div></section>
+
+<!-- ================= CASE STUDY 2: BUDGET WORKBOOK ================= -->
+<section id="workbook" class="alt" aria-labelledby="h-wb"><div class="wrap">
+  <p class="kicker">Case study 2: Surbana Jurong India, Noida, Mar 2025 to Mar 2026</p>
+  <h2 class="title" id="h-wb">A budget-control workbook gave the Director one view of spend against budget</h2>
+  <div class="grid g2" style="margin-top:26px;gap:36px">
+    <div>
+      <p class="label">Context</p><p>I was the head-office coordination point for 15 water and infrastructure projects across 7 project groups, including the AMRUT and Jal Jeevan Mission programmes, the Chennai Desalination Project, METL Jhajjar for Reliance and DLF Water Treatment. I supported about 112 contract-based subconsultant staff and, on 13 of the 15 projects, about 12 vendors each.</p>
+      <p class="label">Challenge</p><p>I joined with a mandate to improve the workflow but had no template, tracker or handover. The Director and project managers needed a single view of budget against spend, while expenses, invoices and cash sheets reached head office in inconsistent formats.</p>
+      <p class="label">My responsibility: shared and individual</p>
+      <ul class="clean">
+        <li><b>Shared.</b> With two peers, I developed an offline Excel tracking framework during a corporate system transition, keeping expenses, cash flow and balances visible.</li>
+        <li><b>Mine.</b> I designed and maintained a project-specific Excel workbook for each project I coordinated, and reported from it to the Director.</li>
+      </ul>
+      <p class="label">Actions</p>
+      <ul class="clean">
+        <li>Built the budget sheet by head and line item, with monthly actuals taken from cash sheets and invoices.</li>
+        <li>Added monthly records for cash sheets, subconsultant staff invoices, expenses, travel, rent and vendor bills.</li>
+        <li>Tracked subconsultant staff status, pay and contract dates, and asked the PM whether to renew as contracts neared their end.</li>
+        <li>When spend departed from the usual pattern, called the project team to find the cause and reported to the Director with recommended solutions.</li>
+      </ul>
+      <p class="label">Evidence of outcome</p>
+      <p class="small">Qualitative: monthly reports and issue updates reached the Director; a colleague compiling finance data used my sheets; Senior Project Managers gave verbal commendations for a smooth pipeline between sites and head office. No savings figure is claimed.</p>
+    </div>
+    <div>
+      <div class="card">
+        <h3 style="font-size:19px">Try the budget-versus-actual flag</h3>
+        <p class="small muted" style="margin:6px 0 4px">Month 4 plan for raw water pumping energy is &#8377;5,95,000. Move the slider to enter the month&rsquo;s actual spend and watch the variance and flag change, as they do in the Actuals sheet. <span class="illus">Illustrative figures</span></p>
+        <label for="actual-range" style="display:block;margin-top:14px">Actual spend: <span id="actual-text"></span></label>
+        <input id="actual-range" type="range" min="400000" max="800000" step="5000" value="640000" aria-describedby="flag-detail">
+        <div class="row" style="margin-top:10px"><span id="flag-pill" class="pill"></span><span id="flag-detail" aria-live="polite"></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:22px">
+    <h3 style="font-size:19px">Operating costs, month 4</h3>
+    <p class="small muted" style="margin:6px 0 10px">Edit any actual. A line is flagged red when it is above plan and green when it is within plan. <span class="illus">Illustrative figures</span></p>
+    <div class="tw"><table aria-label="Illustrative budget versus actual table">
+      <thead><tr><th>Cost line</th><th class="n">Plan</th><th class="n">Actual</th><th class="n">Variance</th><th>Flag</th></tr></thead>
+      <tbody id="ba-body"></tbody>
+      <tfoot><tr class="grp"><td>Total</td><td class="n" id="ba-plan"></td><td class="n" id="ba-actual"></td><td class="n" id="ba-var"></td><td id="ba-flag"></td></tr></tfoot>
+    </table></div>
+  </div>
+  <p class="band"><b>Why it matters:</b> a project manager can see which cost lines run above plan while there is still time to act, and the Director receives the cause and a recommended response.</p>
+</div></section>
+
+<!-- ================= CASE STUDY 3: SITE FLOW ================= -->
+<section id="flow" aria-labelledby="h-flow"><div class="wrap">
+  <p class="kicker">Case study 3: Surbana Jurong India, Noida, Mar 2025 to Mar 2026</p>
+  <h2 class="title" id="h-flow">One accountable site contact and a monthly calendar made requests traceable</h2>
+  <p class="lead">Corporate and project teams worked mostly through email, and subconsultant staff invoices, cash sheets, expenses and vendor bills arrived irregularly from sites. Finance questioned sites, sites chased head office, and requests were lost between the two.</p>
+  <h3 style="font-size:20px;margin:26px 0 4px">The approved process: who is accountable at each stage</h3>
+  <p class="small muted" style="margin-bottom:12px">I proposed this to the technical project director, who approved it, and I ran the review and verification step. Select a stage for detail.</p>
+  <div class="chain" id="chain" role="group" aria-label="Approval stages"></div>
+  <div class="detail" aria-live="polite"><h4 id="chain-title"></h4><p id="chain-detail"></p></div>
+  <h3 style="font-size:20px;margin:30px 0 8px">The monthly submission calendar issued to all sites</h3>
+  <div class="cal">
+    <div style="background:#172B4D;flex:5 1 200px"><b>Subconsultant staff invoices</b>Days 1 to 5</div>
+    <div style="background:#477C73;flex:3 1 140px"><b>Vendor bills</b>Days 6 to 8</div>
+    <div style="background:#5B6770;flex:4 1 170px"><b>Cash sheets</b>Days 9 to 12</div>
+    <div style="background:#8A5A12;flex:3 1 140px"><b>Expenses</b>Days 13 to 15</div>
+  </div>
+  <p class="note" style="margin-top:8px">Requests are made in writing through Teams or email; phone calls are reserved for urgent matters.</p>
+  <div class="grid g2" style="margin-top:26px">
+    <div class="card"><p class="label">A lesson that changed the process</p><h3 style="font-size:19px;margin-bottom:8px">The request I failed to record</h3><p>A site requested a review by phone only, and I neglected to note it in my diary. The expense was not reimbursed on time, and a site colleague paid it out of pocket. I issued the monthly calendar and moved all requests into writing, so that nothing depends on memory.</p></div>
+    <div class="card"><p class="label">A judgement call</p><h3 style="font-size:19px;margin-bottom:8px">A late payment format: a one-time exception</h3><p>Finance introduced a new subconsultant staff payment format, and I informed every site. One site missed it, and returning the invoice would have delayed salaries for all subconsultant staff. Finance declined an exception, so I escalated to the finance head and the site lead. We agreed to accept it once, with the new format mandatory from the next cycle.</p></div>
+  </div>
+  <p class="band"><b>Why it matters:</b> a project manager knows who is responsible at each stage, a Director sees verified packages, and site colleagues know when each document is due.</p>
+</div></section>
+
+<!-- ================= TRACKERS ================= -->
+<section id="tool" class="alt" aria-labelledby="h-tool"><div class="wrap">
+  <p class="kicker">Work samples</p>
+  <h2 class="title" id="h-tool">Three working trackers</h2>
+  <p class="lead">Recreated from the structure of the trackers I built, with fictional data. Everything responds: change a status, a decision or a date and the totals follow. <span class="illus">Illustrative data</span></p>
+  <div class="tabs" role="tablist" aria-label="Trackers">
+    <button class="btn" role="tab" id="tab-docs" aria-controls="panel-docs" aria-selected="true">Documents Log</button>
+    <button class="btn" role="tab" id="tab-staff" aria-controls="panel-staff" aria-selected="false" tabindex="-1">Subconsultant Staff</button>
+    <button class="btn" role="tab" id="tab-tasks" aria-controls="panel-tasks" aria-selected="false" tabindex="-1">Task Tracker</button>
+  </div>
+
+  <!-- Documents Log -->
+  <div id="panel-docs" role="tabpanel" aria-labelledby="tab-docs">
+    <div class="grid g4" id="dl-kpis" style="margin-bottom:14px"></div>
+    <div class="row" style="margin-bottom:12px">
+      <label for="dl-month">Month</label>
+      <select id="dl-month"></select>
+      <button class="btn sm" id="dl-reset" type="button">Reset this month</button>
+      <span class="small muted">Vendor bills, the cash sheet, subconsultant staff invoices and expense bills due each month.</span>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;align-items:start">
+      <div class="tw"><table aria-label="Monthly document checklist"><thead><tr><th>Document</th><th>Reference</th><th class="n">Amount</th><th>Status</th></tr></thead><tbody id="dl-body"></tbody></table></div>
+      <div>
+        <p class="label" style="margin-top:0">Month overview</p>
+        <div class="tw"><table aria-label="Month overview"><thead><tr><th>Month</th><th class="n">Cleared</th><th class="n">Issues</th><th>Done</th></tr></thead><tbody id="dl-over"></tbody></table></div>
+        <p class="small muted" style="margin-top:8px">Select a month to open its checklist.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subconsultant Staff -->
+  <div id="panel-staff" role="tabpanel" aria-labelledby="tab-staff" hidden>
+    <div class="grid g4" id="st-kpis" style="margin-bottom:14px"></div>
+    <div class="row" style="margin-bottom:6px">
+      <label for="st-show">Show me</label>
+      <select id="st-show"><option>All staff</option><option>Renewal decision needed</option><option>Expired</option><option>Decided</option></select>
+      <label for="st-asof">As-of date</label><input id="st-asof" type="date" value="2026-10-14">
+      <label for="st-window">Renewal window (days)</label><input id="st-window" type="number" min="0" max="365" value="60" style="width:90px">
+    </div>
+    <p class="small muted" id="st-check" style="margin-bottom:10px"></p>
+    <div class="tw"><table aria-label="Subconsultant staff contracts"><thead><tr><th>Emp.</th><th>Role</th><th class="n">Monthly pay</th><th>Contract end</th><th>Elapsed</th><th class="n">Days left</th><th>Renewal check</th><th>PM decision</th><th>Next action</th></tr></thead><tbody id="st-body"></tbody></table></div>
+  </div>
+
+  <!-- Task Tracker -->
+  <div id="panel-tasks" role="tabpanel" aria-labelledby="tab-tasks" hidden>
+    <div class="grid g4" id="tk-kpis" style="margin-bottom:14px"></div>
+    <div class="row" style="margin-bottom:10px">
+      <label for="tk-show">Show me</label>
+      <select id="tk-show"><option>All tasks</option><option>Open only</option><option>Overdue</option><option>Due today</option><option>High priority</option><option>Done</option></select>
+      <label for="tk-asof">As-of date</label><input id="tk-asof" type="date" value="2026-10-14">
+    </div>
+    <div class="tw"><table aria-label="Task tracker"><thead><tr><th>ID</th><th>Task</th><th>From</th><th>Priority</th><th>Status</th><th>Follow up</th><th class="n">Days left</th><th>Done</th><th>Flag</th></tr></thead><tbody id="tk-body"></tbody></table></div>
+  </div>
+
+  <div class="card" style="margin-top:26px">
+    <h3 style="font-size:20px">Try the contract-renewal check</h3>
+    <p class="small muted" style="margin:6px 0 14px">Emp. 3 is a security guard on a fixed-term contract. Change the days left and the PM decision and watch the status and next action change. The renewal window is 60 days.</p>
+    <div class="grid g2" style="gap:24px">
+      <div>
+        <label for="renew-days" style="display:block">Days left on the contract: <span id="renew-days-text"></span></label>
+        <input id="renew-days" type="range" min="-30" max="150" step="1" value="47">
+        <label for="renew-decision" style="display:block;margin-top:14px">PM decision</label>
+        <select id="renew-decision"><option>Pending</option><option>Renew</option><option>Do not renew</option><option>Extend 3 months</option></select>
+      </div>
+      <div aria-live="polite">
+        <p style="font-weight:700">Renewal check</p><p><span id="renew-status" class="pill"></span></p>
+        <p style="font-weight:700;margin-top:14px">Next action</p><p id="renew-action"></p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================= GROWTH ================= -->
+<section id="growth" aria-labelledby="h-growth"><div class="wrap">
+  <h2 class="title" id="h-growth">What others said, what I learned, what is next</h2>
+  <div class="grid g3" style="margin-top:24px">
+    <div class="card"><h3 style="font-size:19px;margin-bottom:8px">Recognition</h3>
+      <p style="font-size:28px;font-weight:700;color:var(--head);line-height:1.1">Strong</p><p class="small muted">Manager rating, 2024 annual review (Oct 2023 to Jun 2024)</p>
+      <div class="scale" aria-label="Rating 4 out of 5"><span>1</span><span>2</span><span>3</span><span class="on">4</span><span>5</span></div>
+      <p class="small muted">3 is average, 4 is strong, 5 is outstanding.</p>
+      <p style="margin-top:12px"><b>Written Letter of Appreciation (email), December 2023.</b> From AECOM&rsquo;s East Region Finance Lead and a project lead, for support on urgent project invoicing.</p>
+      <p style="margin-top:10px"><b>Verbal commendations.</b> From Senior Project Managers at Surbana Jurong India, for a smooth pipeline between sites and head office.</p>
+    </div>
+    <div class="card"><h3 style="font-size:19px;margin-bottom:8px">Lessons I carry</h3>
+      <p><b>Document everything.</b> A forgotten phone request cost a colleague money. Every request is now written, dated and held in one place.</p>
+      <p style="margin-top:10px"><b>One accountable contact.</b> A single named person per site is more effective than a whole site sending documents.</p>
+      <p style="margin-top:10px"><b>Exceptions are one-time and agreed.</b> I accept an exception only with the right people&rsquo;s agreement, and only once.</p>
+      <p style="margin-top:10px"><b>Escalate early.</b> Raising a stalled item while there is still time to resolve it helped improve turnaround.</p>
+    </div>
+    <div class="card"><h3 style="font-size:19px;margin-bottom:8px">What is next</h3>
+      <p><b>Now.</b> Advanced Excel, Oracle billing system, Tableau Fundamentals, Lean Six Sigma Green Belt.</p>
+      <p style="margin-top:10px"><b>Next.</b> Power BI, to turn my trackers into live dashboards.</p>
+      <p style="margin-top:10px"><b>Then.</b> PMP, once I am in a role that can support the cost.</p>
+      <p style="margin-top:10px"><b>Roles I am seeking:</b> Project Coordinator, PMO Support, Project Operations Coordinator, Project Delivery Support, and operations-focused analyst roles where my documented experience applies.</p>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <h2>Ready to keep your projects moving from day one.</h2>
+  <p>I am available to join immediately and am based in Noida. If your team needs a coordinator who verifies, resolves and follows through, I would welcome the conversation.</p>
+  <div class="cta">
+    <a href="mailto:ayushkandwal835@gmail.com">Email Ayush</a>
+    <a class="alt2" href="tel:+918351068369">Call +91-8351068369</a>
+    <a class="alt2" href="https://www.linkedin.com/in/-ayushkandwal/" target="_blank" rel="noopener">View LinkedIn profile</a>
+    <a class="alt2" href="#top">Back to top</a>
+  </div>
+  <p class="small" style="margin-top:28px;color:var(--hero-soft)">Immediate joiner. Noida, India. All trackers, demonstrations and figures in the working samples are illustrative. This page is not endorsed by any employer.</p>
+</div></footer>
+
+<script>
+(function(){
+'use strict';
+var $ = function(id){ return document.getElementById(id); };
+var inr = function(n){ return '\u20B9' + Math.abs(n).toLocaleString('en-IN'); };
+var inrS = function(n){ return (n > 0 ? '+' : n < 0 ? '\u2212' : '') + '\u20B9' + Math.abs(n).toLocaleString('en-IN'); };
+var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+var STATUSES = ['Not received','Received','Validated','Issue raised','Approved'];
+var PILL = {'Not received':'p-not','Received':'p-recv','Validated':'p-valid','Issue raised':'p-issue','Approved':'p-appr'};
+var cleared = function(s){ return s === 'Validated' || s === 'Approved'; };
+var focusAfter = function(id){ var el = $(id); if (el) el.focus(); };
+
+/* ---------- hero checklist ---------- */
+var heroItems = [['Vendor bill: Rent','Not received'],['Vendor bill: Electricity','Received'],['Vendor bill: Vehicle 1','Validated'],['Cash sheet','Approved'],['Subconsultant staff invoice: Emp. 1','Not received'],['Subconsultant staff invoice: Emp. 2','Received']];
+var heroState = heroItems.map(function(x){ return x[1]; });
+function statusOptions(sel){ return STATUSES.map(function(s){ return '<option' + (s === sel ? ' selected' : '') + '>' + s + '</option>'; }).join(''); }
+function renderHero(focusId){
+  $('hero-body').innerHTML = heroItems.map(function(it, i){
+    return '<tr><td>' + esc(it[0]) + '</td><td><select id="hero-sel-' + i + '" data-i="' + i + '" aria-label="Status of ' + esc(it[0]) + '">' + statusOptions(heroState[i]) + '</select> <span class="pill ' + PILL[heroState[i]] + '" id="hero-pill-' + i + '">' + heroState[i] + '</span></td></tr>';
+  }).join('');
+  var c = heroState.filter(cleared).length, iss = heroState.filter(function(s){ return s === 'Issue raised'; }).length;
+  $('hero-bar').style.width = Math.round(c / heroState.length * 100) + '%';
+  $('hero-summary').textContent = c + ' of ' + heroState.length + ' cleared' + (iss ? ', ' + iss + ' open issue' + (iss > 1 ? 's' : '') : '');
+  if (focusId) focusAfter(focusId);
+}
+$('hero-body').addEventListener('change', function(e){
+  var i = e.target.getAttribute('data-i'); if (i === null) return;
+  heroState[+i] = e.target.value; renderHero('hero-sel-' + i);
+});
+renderHero();
+
+/* ---------- AECOM stepper ---------- */
+var STEPS = [
+  ['Schedule arrives','Monday: the week\u2019s scheduled projects arrive','The week\u2019s scheduled projects arrive from the billing system, about 72, 54, 24 and 32 across the four weeks of the month.'],
+  ['Add and send','Add invoices in Oracle, sort and send to PMs','I add each invoice in the Oracle billing system, sort them and send every invoice to its project manager.'],
+  ['PM decides','The project manager decides: bill, or not billed','Invoices to be billed come back to me; the rest go to the not-billed bucket.'],
+  ['Edits','Tuesday to Wednesday: apply PM edits','I apply the PM\u2019s comments. The edit loop continues until the PM is satisfied.'],
+  ['Finalize','Finalize and dispatch','Once the PM approves, I finalize in Oracle and dispatch by email, third-party upload or courier.'],
+  ['QA review','Monthly: independent QA review','An independent QA team in Manila reviews every step and reports back monthly. The shared task tracker lets them trace each action.']
+];
+var stepSel = 0;
+function renderSteps(){
+  $('steps').innerHTML = STEPS.map(function(s, i){
+    return '<button type="button" class="step" id="step-' + i + '" aria-pressed="' + (i === stepSel) + '" data-i="' + i + '"><span class="n">' + (i + 1) + '</span>' + s[0] + '</button>';
+  }).join('');
+  $('step-title').textContent = (stepSel + 1) + '. ' + STEPS[stepSel][1];
+  $('step-detail').textContent = STEPS[stepSel][2];
+}
+$('steps').addEventListener('click', function(e){
+  var b = e.target.closest('button[data-i]'); if (!b) return;
+  stepSel = +b.getAttribute('data-i'); renderSteps(); focusAfter('step-' + stepSel);
+});
+renderSteps();
+
+/* ---------- site flow chain ---------- */
+var CHAIN = [
+  ['Site contact','Completeness','One named person per site compiles the documents and reviews them before submission.'],
+  ['Project manager','Approval','Approves the package for the project before it comes to head office.'],
+  ['Coordinator (me)','Accuracy','I review, verify and correct the package against the agreements and invoices before it goes to the Director.'],
+  ['Head office','Authorisation','The Director gives final approval once the package has been verified.'],
+  ['Finance','Payment','Finance releases payment against the approved package.']
+];
+var chainSel = 2;
+function renderChain(){
+  $('chain').innerHTML = CHAIN.map(function(c, i){
+    return '<button type="button" class="step" id="chain-' + i + '" aria-pressed="' + (i === chainSel) + '" data-i="' + i + '"><span class="n">' + (i + 1) + '</span>' + c[0] + '</button>';
+  }).join('');
+  $('chain-title').textContent = (chainSel + 1) + '. ' + CHAIN[chainSel][0] + ': accountable for ' + CHAIN[chainSel][1].toLowerCase();
+  $('chain-detail').textContent = CHAIN[chainSel][2];
+}
+$('chain').addEventListener('click', function(e){
+  var b = e.target.closest('button[data-i]'); if (!b) return;
+  chainSel = +b.getAttribute('data-i'); renderChain(); focusAfter('chain-' + chainSel);
+});
+renderChain();
+
+/* ---------- budget vs actual ---------- */
+var PLAN_PUMP = 595000;
+var BA = [['Raw water pumping energy',595000,640000],['Water treatment chemicals',310000,355000],['Heavy machinery lease',220000,220000],['Consumables and PPE',60000,57000],['Emergency repair and printing',40000,38000]];
+function flagPill(over){ return '<span class="pill ' + (over ? 'p-over' : 'p-within') + '">' + (over ? 'Over plan' : 'Within plan') + '</span>'; }
+function renderFlag(){
+  var a = BA[0][2], diff = a - PLAN_PUMP, over = diff > 0;
+  $('actual-range').value = a;
+  $('actual-text').textContent = inr(a);
+  var p = $('flag-pill'); p.textContent = over ? 'Over plan' : 'Within plan'; p.className = 'pill ' + (over ? 'p-over' : 'p-within');
+  $('flag-detail').textContent = over ? inr(diff) + ' above the ' + inr(PLAN_PUMP) + ' plan (' + (diff / PLAN_PUMP * 100).toFixed(1) + '%).' : (diff === 0 ? 'Exactly on the ' + inr(PLAN_PUMP) + ' plan.' : inr(-diff) + ' under the ' + inr(PLAN_PUMP) + ' plan.');
+}
+function renderBA(focusId){
+  $('ba-body').innerHTML = BA.map(function(r, i){
+    var v = r[2] - r[1];
+    return '<tr><td>' + esc(r[0]) + '</td><td class="n">' + inr(r[1]) + '</td><td class="n"><input type="number" id="ba-in-' + i + '" data-i="' + i + '" value="' + r[2] + '" min="0" step="1000" style="width:112px" aria-label="Actual for ' + esc(r[0]) + '"></td><td class="n" id="ba-v-' + i + '">' + inrS(v) + '</td><td id="ba-f-' + i + '">' + flagPill(v > 0) + '</td></tr>';
+  }).join('');
+  var tp = BA.reduce(function(s, r){ return s + r[1]; }, 0), ta = BA.reduce(function(s, r){ return s + r[2]; }, 0);
+  $('ba-plan').textContent = inr(tp); $('ba-actual').textContent = inr(ta); $('ba-var').textContent = inrS(ta - tp); $('ba-flag').innerHTML = flagPill(ta > tp);
+  if (focusId) { var el = $(focusId); if (el) { el.focus(); try { el.setSelectionRange(el.value.length, el.value.length); } catch (x) {} } }
+}
+$('actual-range').addEventListener('input', function(e){ BA[0][2] = Number(e.target.value); renderFlag(); renderBA(); });
+$('ba-body').addEventListener('change', function(e){
+  var i = e.target.getAttribute('data-i'); if (i === null) return;
+  var n = Number(e.target.value); if (!isFinite(n) || n < 0) n = 0; BA[+i][2] = n;
+  if (+i === 0) renderFlag(); renderBA('ba-in-' + i);
+});
+renderFlag(); renderBA();
+
+/* ---------- documents log ---------- */
+var ELEC=[415000,440000,575000,640000,545000,448000], CHEM=[112000,125000,285000,355000,262000,138000], MACH=[160000,160000,225000,220000,196000,160000],
+    LABT=[15000,15000,30000,30000,20000,15000], FUEL=[27000,31000,44000,46000,36000,30000], CONS=[33000,36000,58000,57000,47000,34000], EMER=[10000,16000,27000,38000,52000,18000],
+    PAY=[24000,26000,22000,30000,28000,24000,26000,22000,30000,28000,26000,24000];
+var round100 = function(n){ return Math.round(n / 100) * 100; };
+var GROUPS = [
+  {name:'Vendor bills', pre:'VB', items:['1. Rent','2. Electricity','3. Vehicle 1','4. Vehicle 2','5. Vehicle 3','6. Chemicals','7. Machinery lease','8. Lab testing (NABL)']},
+  {name:'Cash sheet', pre:'CS', items:['Site cash sheet']},
+  {name:'Subconsultant staff invoices', pre:'SI', items:['Emp. 1','Emp. 2','Emp. 3','Emp. 4','Emp. 5','Emp. 6','Emp. 7','Emp. 8','Emp. 9','Emp. 10','Emp. 11','Emp. 12']},
+  {name:'Expense bills', pre:'EX', items:['Emp. 1','Emp. 2','Emp. 3','Emp. 4']}
+];
+function docAmount(m, g, i){
+  var k = m - 1;
+  if (g === 0) return [45000, ELEC[k], round100(FUEL[k]*0.40), round100(FUEL[k]*0.35), round100(FUEL[k]*0.25), CHEM[k], MACH[k], LABT[k]][i];
+  if (g === 1) return CONS[k] + EMER[k];
+  if (g === 2) return PAY[i];
+  return [12000, 8000, 15000, 6000][i] + (m % 3) * 1000;
+}
+function docInit(m, g, i){
+  if (m <= 4) return 'Approved';
+  if (m === 5){ if (g === 0 && i === 5) return 'Issue raised'; if ((g === 2 && i === 8) || (g === 3 && i === 2)) return 'Validated'; return 'Approved'; }
+  var v = [['Approved','Validated','Validated','Issue raised','Not received','Received','Validated','Not received'], ['Received'],
+           ['Approved','Approved','Approved','Approved','Approved','Approved','Validated','Validated','Issue raised','Received','Not received','Not received'],
+           ['Validated','Received','Not received','Not received']];
+  return v[g][i];
+}
+var DOC_NOTES = {'5-0-5':'Rate above the agreed rate','6-0-3':'Date differs from the agreement','6-2-8':'Site approval missing'};
+var docs = {};
+function docsInit(m){ docs[m] = GROUPS.map(function(G, g){ return G.items.map(function(_, i){ return docInit(m, g, i); }); }); }
+for (var mm = 1; mm <= 6; mm++) docsInit(mm);
+var curMonth = 6;
+$('dl-month').innerHTML = [1,2,3,4,5,6].map(function(m){ return '<option value="' + m + '"' + (m === 6 ? ' selected' : '') + '>Month ' + m + '</option>'; }).join('');
+function monthStats(m){
+  var due = 0, cl = 0, iss = 0, amt = 0;
+  docs[m].forEach(function(grp, g){ grp.forEach(function(s, i){ due++; if (cleared(s)) cl++; if (s === 'Issue raised') iss++; if (s !== 'Not received') amt += docAmount(m, g, i); }); });
+  return {due:due, cl:cl, iss:iss, amt:amt, pct:Math.round(cl / due * 100)};
+}
+function renderDocs(focusId){
+  var m = curMonth, html = '';
+  GROUPS.forEach(function(G, g){
+    var grp = docs[m][g], c = grp.filter(cleared).length;
+    html += '<tr class="grp"><td colspan="3">' + G.name + '</td><td id="dl-g-' + g + '">' + c + ' of ' + grp.length + ' cleared</td></tr>';
+    G.items.forEach(function(it, i){
+      var s = grp[i], got = s !== 'Not received', note = DOC_NOTES[m + '-' + g + '-' + i];
+      html += '<tr><td>' + esc(it) + (s === 'Issue raised' ? '<br><span class="small" style="color:var(--bad-ink)">' + esc(note || 'Issue raised: follow up') + '</span>' : '') + '</td><td class="nw">' + (got ? G.pre + '-' + ('0' + m).slice(-2) + ('0' + (i + 1)).slice(-2) : '\u2014') + '</td><td class="n">' + (got ? inr(docAmount(m, g, i)) : '\u2014') + '</td>' +
+        '<td><select id="dl-sel-' + g + '-' + i + '" data-g="' + g + '" data-i="' + i + '" aria-label="Status of ' + esc(G.name + ' ' + it) + '">' + statusOptions(s) + '</select></td></tr>';
+    });
+  });
+  $('dl-body').innerHTML = html;
+  var st = monthStats(m);
+  $('dl-kpis').innerHTML =
+    '<div class="kpi"><b id="dl-k-due">' + st.due + '</b><span>Items due in Month ' + m + '</span></div>' +
+    '<div class="kpi ok"><b id="dl-k-cleared">' + st.cl + '</b><span>Cleared (validated or approved)</span></div>' +
+    '<div class="kpi ' + (st.iss ? 'bad' : '') + '"><b id="dl-k-issues">' + st.iss + '</b><span>Open issues</span></div>' +
+    '<div class="kpi"><b id="dl-k-pct">' + st.pct + '%</b><span>Complete</span><div class="bar" style="margin-top:6px"><i style="width:' + st.pct + '%"></i></div></div>';
+  var ov = '';
+  for (var k = 1; k <= 6; k++){
+    var s2 = monthStats(k);
+    ov += '<tr' + (k === m ? ' class="hit"' : '') + '><td><button type="button" class="btn sm" data-m="' + k + '" id="dl-ov-' + k + '" aria-pressed="' + (k === m) + '">Month ' + k + '</button></td><td class="n" id="dl-ovc-' + k + '">' + s2.cl + ' / ' + s2.due + '</td><td class="n" id="dl-ovi-' + k + '">' + s2.iss + '</td><td id="dl-ovp-' + k + '">' + s2.pct + '%</td></tr>';
+  }
+  $('dl-over').innerHTML = ov;
+  if (focusId) focusAfter(focusId);
+}
+$('dl-body').addEventListener('change', function(e){
+  var g = e.target.getAttribute('data-g'); if (g === null) return;
+  var i = e.target.getAttribute('data-i'); docs[curMonth][+g][+i] = e.target.value; renderDocs('dl-sel-' + g + '-' + i);
+});
+$('dl-month').addEventListener('change', function(e){ curMonth = +e.target.value; renderDocs(); });
+$('dl-over').addEventListener('click', function(e){
+  var b = e.target.closest('button[data-m]'); if (!b) return;
+  curMonth = +b.getAttribute('data-m'); $('dl-month').value = String(curMonth); renderDocs('dl-ov-' + curMonth);
+});
+$('dl-reset').addEventListener('click', function(){ docsInit(curMonth); renderDocs('dl-reset'); });
+renderDocs();
+
+/* ---------- renewal logic (shared) ---------- */
+function renewal(days, decision, windowDays){
+  var status = 'OK';
+  if (decision !== 'Pending') status = 'Decided'; else if (days < 0) status = 'Expired'; else if (days <= windowDays) status = 'Ask PM: renew?';
+  var action = 'No action';
+  if (decision === 'Renew') action = 'Prepare renewal and update the dates';
+  else if (decision === 'Do not renew') action = 'Plan exit and final settlement';
+  else if (decision === 'Extend 3 months') action = 'Issue a short extension';
+  else if (status === 'Expired') action = 'Urgent: confirm status with the PM';
+  else if (status === 'Ask PM: renew?') action = 'Call the PM: renew or not?';
+  return {status:status, action:action};
+}
+var RP = {'OK':'p-within','Decided':'p-valid','Expired':'p-over','Ask PM: renew?':'p-recv'};
+function renderRenew(){
+  var d = Number($('renew-days').value), dec = $('renew-decision').value, r = renewal(d, dec, 60);
+  $('renew-days-text').textContent = d < 0 ? Math.abs(d) + ' days past the end date' : d + ' days';
+  var p = $('renew-status'); p.textContent = r.status; p.className = 'pill ' + RP[r.status]; $('renew-action').textContent = r.action;
+}
+$('renew-days').addEventListener('input', renderRenew); $('renew-decision').addEventListener('change', renderRenew); renderRenew();
+
+/* ---------- subconsultant staff ---------- */
+var ROLES = ['Plant operator','Lab technician','Security guard','Pump operator','Plant operator','Admin assistant','Lab technician','Security guard','Pump operator','Plant operator','Admin assistant','Pump operator'];
+var CONTRACTS = [['2025-11-01','2026-10-31'],['2026-01-01','2026-12-31'],['2025-12-01','2026-11-30'],['2026-02-01','2027-01-31'],['2025-10-01','2026-09-30'],['2026-03-01','2027-02-28'],['2026-01-15','2026-11-14'],['2025-12-15','2026-12-14'],['2026-04-01','2027-03-31'],['2026-02-15','2026-12-14'],['2026-03-15','2027-03-14'],['2026-05-01','2027-04-30']];
+var staff = ROLES.map(function(r, i){ return {emp:'Emp. ' + (i + 1), role:r, pay:PAY[i], start:CONTRACTS[i][0], end:CONTRACTS[i][1], decision:i === 0 ? 'Renew' : 'Pending'}; });
+var dayMs = 86400000, toDate = function(s){ var p = s.split('-'); return Date.UTC(+p[0], +p[1] - 1, +p[2]); };
+function renderStaff(focusId){
+  var asof = toDate($('st-asof').value || '2026-10-14'), win = Number($('st-window').value); if (!isFinite(win)) win = 60;
+  var show = $('st-show').value, counts = {need:0, exp:0, dec:0}, payroll = 0, rows = '';
+  staff.forEach(function(s, i){
+    var days = Math.round((toDate(s.end) - asof) / dayMs), r = renewal(days, s.decision, win);
+    var el = Math.max(0, Math.min(1, (asof - toDate(s.start)) / (toDate(s.end) - toDate(s.start))));
+    payroll += s.pay;
+    if (r.status === 'Ask PM: renew?') counts.need++; if (r.status === 'Expired') counts.exp++; if (r.status === 'Decided') counts.dec++;
+    var match = show === 'All staff' || (show === 'Renewal decision needed' && r.status === 'Ask PM: renew?') || (show === 'Expired' && r.status === 'Expired') || (show === 'Decided' && r.status === 'Decided');
+    var cls = show === 'All staff' ? '' : (match ? 'hit' : 'dim');
+    rows += '<tr class="' + cls + '" id="st-row-' + i + '"><td>' + s.emp + '</td><td>' + s.role + '</td><td class="n">' + inr(s.pay) + '</td><td class="nw">' + s.end + '</td>' +
+      '<td style="min-width:90px"><div class="bar"><i style="width:' + Math.round(el * 100) + '%"></i></div></td><td class="n" id="st-days-' + i + '" ' + (days < 0 ? 'style="color:var(--bad-ink);font-weight:700"' : '') + '>' + days + '</td>' +
+      '<td><span class="pill ' + RP[r.status] + '" id="st-status-' + i + '">' + r.status + '</span></td>' +
+      '<td><select id="st-dec-' + i + '" data-i="' + i + '" aria-label="PM decision for ' + s.emp + '">' + ['Pending','Renew','Do not renew','Extend 3 months'].map(function(o){ return '<option' + (o === s.decision ? ' selected' : '') + '>' + o + '</option>'; }).join('') + '</select></td>' +
+      '<td class="small" id="st-action-' + i + '">' + r.action + '</td></tr>';
+  });
+  $('st-body').innerHTML = rows;
+  $('st-kpis').innerHTML =
+    '<div class="kpi"><b id="st-k-active">' + staff.length + '</b><span>Active staff</span></div>' +
+    '<div class="kpi warn"><b id="st-k-need">' + counts.need + '</b><span>Renewal decision needed</span></div>' +
+    '<div class="kpi bad"><b id="st-k-exp">' + counts.exp + '</b><span>Expired, still active</span></div>' +
+    '<div class="kpi ok"><b id="st-k-dec">' + counts.dec + '</b><span>Decided</span></div>' +
+    '<div class="kpi"><b id="st-k-pay">' + inr(payroll) + '</b><span>Monthly payroll</span></div>';
+  $('st-check').textContent = payroll === 310000 ? 'Payroll matches the On-Site Staff line (\u20B93,10,000 a month) in the illustrative budget plan.' : 'Payroll differs from the illustrative On-Site Staff budget line.';
+  if (focusId) focusAfter(focusId);
+}
+$('st-body').addEventListener('change', function(e){
+  var i = e.target.getAttribute('data-i'); if (i === null) return;
+  staff[+i].decision = e.target.value; renderStaff('st-dec-' + i);
+});
+['st-show','st-asof','st-window'].forEach(function(id){ $(id).addEventListener('change', function(){ renderStaff(); }); });
+$('st-window').addEventListener('input', function(){ renderStaff(); });
+renderStaff();
+
+/* ---------- task tracker ---------- */
+var TASKS = [
+  {id:'T-001',from:'Site coordinator',task:'Month 6 cash sheet: collect two missing receipts',pri:'High',status:'In progress',due:'2026-10-12',done:false},
+  {id:'T-002',from:'Project manager',task:'Vehicle 2 bill: ask for a corrected bill, date differs from the agreement',pri:'High',status:'Waiting on site',due:'2026-10-13',done:false},
+  {id:'T-003',from:'Finance',task:'Circulate the new subconsultant staff payment format to every site',pri:'High',status:'Done',due:'',done:true},
+  {id:'T-004',from:'Site admin',task:'Travel booking details for the site visit',pri:'Low',status:'Done',due:'',done:true},
+  {id:'T-005',from:'Project manager',task:'Renewal decision for Emp. 1 and Emp. 7',pri:'High',status:'Waiting on PM',due:'2026-10-14',done:false},
+  {id:'T-006',from:'Director',task:'Month 6 status report for approval',pri:'High',status:'In progress',due:'2026-10-15',done:false},
+  {id:'T-007',from:'Site coordinator',task:'Emp. 9 invoice: site approval missing',pri:'Medium',status:'Waiting on site',due:'2026-10-13',done:false},
+  {id:'T-008',from:'Finance',task:'Client invoice check before release',pri:'Medium',status:'In progress',due:'2026-10-16',done:false},
+  {id:'T-009',from:'HR',task:'Site compliance documents for new joiners',pri:'Medium',status:'Not started',due:'2026-10-19',done:false},
+  {id:'T-010',from:'Project manager',task:'Machinery lease agreement review call',pri:'Low',status:'Not started',due:'2026-10-21',done:false}
+];
+var TSTAT = ['Not started','In progress','Waiting on site','Waiting on finance','Waiting on PM','Done'];
+var PRI = {'High':'p-high','Medium':'p-med','Low':'p-low'};
+var FLAGP = {'Overdue':'p-over','Due today':'p-recv','Upcoming':'p-valid','Done':'p-within','No date':'p-not'};
+function renderTasks(focusId){
+  var asof = toDate($('tk-asof').value || '2026-10-14'), show = $('tk-show').value, rows = '', open = 0, over = 0, today = 0, hi = 0, done = 0;
+  TASKS.forEach(function(t, i){
+    var days = t.due ? Math.round((toDate(t.due) - asof) / dayMs) : null;
+    var flag = t.done ? 'Done' : (days === null ? 'No date' : (days < 0 ? 'Overdue' : (days === 0 ? 'Due today' : 'Upcoming')));
+    if (t.done) done++; else { open++; if (t.pri === 'High') hi++; }
+    if (flag === 'Overdue') over++; if (flag === 'Due today') today++;
+    var match = show === 'All tasks' || (show === 'Open only' && !t.done) || (show === 'Overdue' && flag === 'Overdue') || (show === 'Due today' && flag === 'Due today') || (show === 'High priority' && t.pri === 'High' && !t.done) || (show === 'Done' && t.done);
+    var cls = (show === 'All tasks' ? '' : (match ? 'hit' : 'dim')) + (t.done ? ' done' : '');
+    rows += '<tr class="' + cls + '" id="tk-row-' + i + '"><td class="nw">' + t.id + '</td><td>' + esc(t.task) + '</td><td>' + t.from + '</td><td><span class="pill ' + PRI[t.pri] + '">' + t.pri + '</span></td>' +
+      '<td><select id="tk-st-' + i + '" data-i="' + i + '" data-k="status" aria-label="Status of ' + t.id + '">' + TSTAT.map(function(o){ return '<option' + (o === t.status ? ' selected' : '') + '>' + o + '</option>'; }).join('') + '</select></td>' +
+      '<td class="nw">' + (t.due || '\u2014') + '</td><td class="n" id="tk-days-' + i + '">' + (days === null || t.done ? '\u2014' : days) + '</td>' +
+      '<td><input type="checkbox" id="tk-done-' + i + '" data-i="' + i + '" data-k="done"' + (t.done ? ' checked' : '') + ' aria-label="Mark ' + t.id + ' done" style="width:22px;height:22px"></td>' +
+      '<td><span class="pill ' + FLAGP[flag] + '" id="tk-flag-' + i + '">' + flag + '</span></td></tr>';
+  });
+  $('tk-body').innerHTML = rows;
+  $('tk-kpis').innerHTML =
+    '<div class="kpi"><b id="tk-k-open">' + open + '</b><span>Open tasks</span></div>' +
+    '<div class="kpi bad"><b id="tk-k-over">' + over + '</b><span>Overdue</span></div>' +
+    '<div class="kpi warn"><b id="tk-k-today">' + today + '</b><span>Due today</span></div>' +
+    '<div class="kpi bad"><b id="tk-k-high">' + hi + '</b><span>High priority open</span></div>' +
+    '<div class="kpi ok"><b id="tk-k-done">' + done + '</b><span>Done</span></div>' +
+    '<div class="kpi"><b id="tk-k-pct">' + Math.round(done / TASKS.length * 100) + '%</b><span>Completion</span></div>';
+  if (focusId) focusAfter(focusId);
+}
+$('tk-body').addEventListener('change', function(e){
+  var i = e.target.getAttribute('data-i'); if (i === null) return; i = +i;
+  if (e.target.getAttribute('data-k') === 'done'){ TASKS[i].done = e.target.checked; if (e.target.checked) TASKS[i].status = 'Done'; else if (TASKS[i].status === 'Done') TASKS[i].status = 'In progress'; renderTasks('tk-done-' + i); }
+  else { TASKS[i].status = e.target.value; TASKS[i].done = e.target.value === 'Done'; renderTasks('tk-st-' + i); }
+});
+['tk-show','tk-asof'].forEach(function(id){ $(id).addEventListener('change', function(){ renderTasks(); }); });
+renderTasks();
+
+/* ---------- tabs ---------- */
+var TABS = ['docs','staff','tasks'];
+function selectTab(name, focus){
+  TABS.forEach(function(t){
+    var on = t === name; $('tab-' + t).setAttribute('aria-selected', on); $('tab-' + t).tabIndex = on ? 0 : -1; $('panel-' + t).hidden = !on;
+  });
+  if (focus) $('tab-' + name).focus();
+}
+TABS.forEach(function(t, i){
+  $('tab-' + t).addEventListener('click', function(){ selectTab(t); });
+  $('tab-' + t).addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight') { e.preventDefault(); selectTab(TABS[(i + 1) % 3], true); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); selectTab(TABS[(i + 2) % 3], true); }
+  });
+});
+})();
+</script>
+</body>
+</html>
